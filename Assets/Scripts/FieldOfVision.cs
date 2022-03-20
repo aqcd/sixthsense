@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class FieldOfVision : MonoBehaviour
 {
+    public static FieldOfVision instance;
+
     [SerializeField]
     public GameObject obj;
 
@@ -12,10 +14,16 @@ public class FieldOfVision : MonoBehaviour
     public float initialScale = 20f;
     public float rateOfDecrease = 0.01f;
 
+    void Awake() {
+        if (instance == null) {
+            instance = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        obj.transform.localScale = new Vector3(initialScale, initialScale, initialScale);
+        Reset();
     }
 
     // Update is called once per frame
@@ -25,5 +33,10 @@ public class FieldOfVision : MonoBehaviour
             float dec = rateOfDecrease * Time.deltaTime;
             obj.transform.localScale -= new Vector3(dec, dec, dec);
         }
+    }
+
+    public void Reset()
+    {
+        obj.transform.localScale = new Vector3(initialScale, initialScale, initialScale);
     }
 }

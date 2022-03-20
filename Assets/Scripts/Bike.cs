@@ -7,6 +7,8 @@ namespace MoreMountains.TopDownEngine
 {
     public class Bike : MonoBehaviour
     {
+        private AudioSource audioSource;
+
         [SerializeField]
         public float speed = 5;
 
@@ -19,6 +21,7 @@ namespace MoreMountains.TopDownEngine
         // Start is called before the first frame update
         void Start()
         {
+            audioSource = GetComponent<AudioSource>();
             Destroy(gameObject, 30);
         }
 
@@ -31,6 +34,13 @@ namespace MoreMountains.TopDownEngine
                 Vector3 originalPosition = gameObject.transform.position;
                 Vector3 deltaPosition = new Vector3((isGoingLeft ? -1 : 1) * speed * Time.deltaTime, 0, 0);
                 gameObject.transform.position = originalPosition + deltaPosition;
+            }
+        
+            if (Vector3.Distance(gameObject.transform.position, PlayerPositionManager.instance.position) < 10.0f) {
+                audioSource.mute = false;
+                audioSource.panStereo = (gameObject.transform.position.x - PlayerPositionManager.instance.position.x) / 10.0f;
+            } else {
+                audioSource.mute = true;
             }
         }
     }

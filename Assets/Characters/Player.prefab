@@ -9767,6 +9767,7 @@ GameObject:
   - component: {fileID: 114619658823058744}
   - component: {fileID: 114644362621734812}
   - component: {fileID: 114171358364461030}
+  - component: {fileID: -3422098899523604909}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -9951,8 +9952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityStartSfx: {fileID: 0}
-  AbilityInProgressSfx: {fileID: 8300000, guid: 655425dccf77546449f89eb978aeabd1,
-    type: 3}
+  AbilityInProgressSfx: {fileID: 0}
   AbilityStopSfx: {fileID: 0}
   AbilityStartFeedbacks: {fileID: 0}
   AbilityStopFeedbacks: {fileID: 0}
@@ -9986,8 +9986,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityStartSfx: {fileID: 0}
-  AbilityInProgressSfx: {fileID: 8300000, guid: 0e68e10d6bc130d438acd7a709a28f5b,
-    type: 3}
+  AbilityInProgressSfx: {fileID: 0}
   AbilityStopSfx: {fileID: 0}
   AbilityStartFeedbacks: {fileID: 0}
   AbilityStopFeedbacks: {fileID: 0}
@@ -10136,6 +10135,19 @@ MonoBehaviour:
   MasterHealth: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
+--- !u!114 &-3422098899523604909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498750440386690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d307a95299c534eb460d2e4bd922b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 0, y: 0, z: 0}
 --- !u!1 &1561075265052736
 GameObject:
   m_ObjectHideFlags: 0
