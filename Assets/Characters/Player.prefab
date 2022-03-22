@@ -16495,6 +16495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8773258298053573596}
   - component: {fileID: 4206741978730624185}
+  - component: {fileID: 969785594007656549}
   m_Layer: 10
   m_Name: DeathFeedback
   m_TagString: Untagged
@@ -16546,7 +16547,19 @@ MonoBehaviour:
     TriggerUnityEvents: 1
     OnPlay:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 969785594007656549}
+          m_TargetAssemblyTypeName: OnDeath, Assembly-CSharp
+          m_MethodName: StopTimer
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     OnPause:
       m_PersistentCalls:
         m_Calls: []
@@ -16560,6 +16573,18 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
   DebugActive: 0
+--- !u!114 &969785594007656549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7972998509315848447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b29bbccd7666b46b0a88a55d617f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8564210630019089768
 GameObject:
   m_ObjectHideFlags: 0

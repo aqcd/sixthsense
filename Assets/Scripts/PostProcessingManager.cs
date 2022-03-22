@@ -40,7 +40,9 @@ public class PostProcessingManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dph.focusDistance.value -= rateOfDecrease * Time.deltaTime;
+        if (dph.focusDistance.value > 0.1) {
+            dph.focusDistance.value -= rateOfDecrease * Time.deltaTime;
+        }
     }
 
     public void Reset()
