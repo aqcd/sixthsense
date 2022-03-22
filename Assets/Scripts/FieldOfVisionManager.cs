@@ -28,5 +28,6 @@ public class FieldOfVisionManager : MonoBehaviour
     public void Reset()
     {
         FieldOfVision.instance.Reset();
+        PostProcessingManager.instance.Reset();
     }
 }

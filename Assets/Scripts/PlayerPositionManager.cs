@@ -25,6 +25,5 @@ public class PlayerPositionManager : MonoBehaviour
     void Update()
     {
         this.position = gameObject.transform.position;
-        Debug.Log(position);
     }
 }
