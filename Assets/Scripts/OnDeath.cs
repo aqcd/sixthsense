@@ -17,7 +17,6 @@ public class OnDeath : MonoBehaviour
     }
 
     public void StopTimer() {
-        Debug.Log("he");
         Timer.instance.StopTimer();
     }
 }

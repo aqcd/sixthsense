@@ -284,8 +284,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.6
-      minScalar: 0.4
+      scalar: 0.4
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -5101,7 +5101,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1.5
+      scalar: 1
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -9653,6 +9653,7 @@ GameObject:
   - component: {fileID: 4330552656303096}
   - component: {fileID: 212479530728563738}
   - component: {fileID: 95179347267985190}
+  - component: {fileID: 8728077475168001549}
   m_Layer: 10
   m_Name: KoalaModel
   m_TagString: Untagged
@@ -9716,7 +9717,7 @@ SpriteRenderer:
   m_SortingLayerID: 47421343
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: dc570d0b68875aa468baed8b33c5965b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9010ddc6a5be4746a8d5a244727a1f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9737,7 +9738,7 @@ Animator:
   m_GameObject: {fileID: 1358283918792732}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 91b83942a92301949b1e0d318f032906, type: 2}
+  m_Controller: {fileID: 9100000, guid: 7dc9f3acdb1fb254a99ce3ed513a05b0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -9746,6 +9747,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8728077475168001549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1358283918792732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 687a7739e8cbb744ba622f489b4b934b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noStick: {fileID: 9100000, guid: 7dc9f3acdb1fb254a99ce3ed513a05b0, type: 2}
+  stick: {fileID: 9100000, guid: 9d69746f0d592414195cb6bb49831796, type: 2}
+  am: {fileID: 95179347267985190}
 --- !u!1 &1498750440386690
 GameObject:
   m_ObjectHideFlags: 0
@@ -9830,9 +9846,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.24}
+  m_Offset: {x: 0, y: 0.34137344}
   serializedVersion: 2
-  m_Radius: 0.3
+  m_Radius: 0.32722092
 --- !u!210 &210286107803106362
 SortingGroup:
   m_ObjectHideFlags: 0
