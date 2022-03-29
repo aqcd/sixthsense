@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations;
 using MoreMountains.Tools;
 
 public class StickAnimatorManager : MonoBehaviour
@@ -9,10 +8,10 @@ public class StickAnimatorManager : MonoBehaviour
     public static StickAnimatorManager instance;
 
     [SerializeField]
-    public AnimatorController noStick;
+    public RuntimeAnimatorController noStick;
     
     [SerializeField]
-    public AnimatorController stick;
+    public RuntimeAnimatorController stick;
 
     [SerializeField]
     public Animator am;
