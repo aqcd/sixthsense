@@ -27,11 +27,14 @@ public class ResetManager : MonoBehaviour
 
     public void Reset()
     {
+        MoreMountains.TopDownEngine.GUIManager.Instance.SetWinScreen(false);
         FieldOfVision.instance.Reset();
         PostProcessingManager.instance.Reset();
         WalkingStickManager.hasWalkingStick = false;
         StickAnimatorManager.instance.NoStick();
         Timer.instance.Reset();
         Timer.instance.StartTimer();
+        WinSplashManager.instance.Reset();
+        DeathText.instance.Reset();
     }
 }

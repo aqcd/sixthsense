@@ -33,6 +33,8 @@ namespace MoreMountains.TopDownEngine
 		/// the death screen
 		[Tooltip("the death screen")]
 		public GameObject DeathScreen;
+		[Tooltip("the win screen")]
+		public GameObject WinScreen;
 		/// The mobile buttons
 		[Tooltip("The mobile buttons")]
 		public CanvasGroup Buttons;
@@ -91,6 +93,7 @@ namespace MoreMountains.TopDownEngine
 			RefreshPoints();
             SetPauseScreen(false);
             SetDeathScreen(false);
+            SetWinScreen(false);
 		}
 
 	    /// <summary>
@@ -179,7 +182,7 @@ namespace MoreMountains.TopDownEngine
         /// <param name="state">If set to <c>true</c>, sets the pause.</param>
         public virtual void SetPauseScreen(bool state)
         {
-            if (PauseScreen != null)
+            if (PauseScreen != null && !WinScreen.activeSelf)
             {
                 PauseScreen.SetActive(state);
                 EventSystem.current.sendNavigationEvents = state;
@@ -192,9 +195,22 @@ namespace MoreMountains.TopDownEngine
         /// <param name="state">If set to <c>true</c>, sets the pause.</param>
         public virtual void SetDeathScreen(bool state)
         {
-            if (DeathScreen != null)
+            if (DeathScreen != null && !WinScreen.activeSelf)
             {
                 DeathScreen.SetActive(state);
+                EventSystem.current.sendNavigationEvents = state;
+            }
+        }
+
+        /// <summary>
+        /// Sets the win screen on or off.
+        /// </summary>
+        /// <param name="state">If set to <c>true</c>, sets the pause.</param>
+        public virtual void SetWinScreen(bool state)
+        {
+            if (WinScreen != null)
+            {
+                WinScreen.SetActive(state);
                 EventSystem.current.sendNavigationEvents = state;
             }
         }

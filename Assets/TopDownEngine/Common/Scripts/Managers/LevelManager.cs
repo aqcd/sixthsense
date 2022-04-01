@@ -414,6 +414,7 @@ namespace MoreMountains.TopDownEngine
             yield return new WaitForSeconds(RespawnDelay);
             GUIManager.Instance.SetPauseScreen(false);
             GUIManager.Instance.SetDeathScreen(false);
+            GUIManager.Instance.SetWinScreen(false);
             MMFadeOutEvent.Trigger(OutroFadeDuration, FadeCurve, FaderID, true, Players[0].transform.position);
 
 
