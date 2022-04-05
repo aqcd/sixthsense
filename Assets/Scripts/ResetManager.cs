@@ -31,6 +31,8 @@ public class ResetManager : MonoBehaviour
         FieldOfVision.instance.Reset();
         PostProcessingManager.instance.Reset();
         WalkingStickManager.hasWalkingStick = false;
+        DoggoManager.hasDoggo = false;
+        DoggoFollowManager.instance.Reset();
         StickAnimatorManager.instance.NoStick();
         Timer.instance.Reset();
         Timer.instance.StartTimer();

@@ -7,7 +7,7 @@ public class Car : MonoBehaviour
     private AudioSource audioSource;
 
     [SerializeField]
-    public float speed = 6;
+    public float speed = 12;
 
     [SerializeField]
     public bool isGoingLeft = false;
@@ -22,6 +22,11 @@ public class Car : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (DoggoManager.hasDoggo) {
+            this.speed = 6;
+        } else {
+            this.speed = 12;
+        }
         Vector3 originalPosition = gameObject.transform.position;
         Vector3 deltaPosition = new Vector3((isGoingLeft ? -1 : 1) * speed * Time.deltaTime, 0, 0);
         gameObject.transform.position = originalPosition + deltaPosition;

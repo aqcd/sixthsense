@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc285bb320a80947aeabf355a55a5d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 4
   isGoingLeft: 1
   threshold: 5
 --- !u!95 &-5306685045061481561
