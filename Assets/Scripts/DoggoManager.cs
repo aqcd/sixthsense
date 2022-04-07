@@ -7,7 +7,7 @@ public class DoggoManager : MonoBehaviour
 {
     public static DoggoManager instance;
 
-    public static bool hasDoggo;
+    public static bool hasDoggo = false;
 
     void Awake() {
         if (instance == null) {

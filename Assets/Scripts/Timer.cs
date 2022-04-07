@@ -31,7 +31,7 @@ public class Timer : MonoBehaviour
         if (isActive) {
             time += Time.deltaTime;
             string text = "";
-            text = text + ((PlayerPositionManager.instance.position.y + 26.5f) / 226.5f).ToString("0.00") + "km / 1.0km";
+            text = text + ((PlayerPositionManager.instance.position.y + 26.5f) / 221.5f).ToString("0.00") + "km / 1.0km";
             textField.text = text;
         }
     }

@@ -24,7 +24,7 @@ public class WinSplashManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!won && (PlayerPositionManager.instance.position.y > 200.0f)) {
+        if (!won && (PlayerPositionManager.instance.position.y > 195.0f)) {
             MoreMountains.TopDownEngine.GUIManager.Instance.SetWinScreen(true);
             won = true;
         }
